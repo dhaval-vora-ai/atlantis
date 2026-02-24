@@ -323,7 +323,7 @@ func TestGitlabClient_MergePullSquash(t *testing.T) {
 		},
 		{
 			"merge method (default)",
-			"merge", 
+			"merge",
 			false,
 		},
 		{
