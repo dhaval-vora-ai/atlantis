@@ -1241,6 +1241,13 @@ func TestClient_MergePullCorrectMethod(t *testing.T) {
 			mergeMethodOption: "squash",
 			expMethod:         "squash",
 		},
+		"invalid merge method": {
+			allowMerge:        true,
+			allowRebase:       true,
+			allowSquash:       true,
+			mergeMethodOption: "squish",
+			expErr:            `merge method "squish" is unknown`,
+		},
 	}
 
 	for name, c := range cases {
