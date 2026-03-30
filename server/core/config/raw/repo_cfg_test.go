@@ -266,7 +266,7 @@ func TestConfig_ToValid(t *testing.T) {
 			exp: valid.RepoCfg{
 				Version:         2,
 				Workflows:       make(map[string]valid.Workflow),
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 			},
 		},
 		{
@@ -284,7 +284,7 @@ func TestConfig_ToValid(t *testing.T) {
 				Workflows:       map[string]valid.Workflow{},
 				Projects:        nil,
 				RepoLocks:       &valid.DefaultRepoLocks,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 			},
 		},
 		{
@@ -298,7 +298,7 @@ func TestConfig_ToValid(t *testing.T) {
 				ParallelApply:             nil,
 				AbortOnExecutionOrderFail: false,
 				Workflows:                 map[string]valid.Workflow{},
-				AutomergeMethod:           raw.DefaultAutomergeMethod,
+				AutomergeMethod:           "",
 			},
 		},
 		{
@@ -315,7 +315,7 @@ func TestConfig_ToValid(t *testing.T) {
 				ParallelApply:             Bool(true),
 				AbortOnExecutionOrderFail: true,
 				Workflows:                 map[string]valid.Workflow{},
-				AutomergeMethod:           raw.DefaultAutomergeMethod,
+				AutomergeMethod:           "",
 			},
 		},
 		{
@@ -332,7 +332,7 @@ func TestConfig_ToValid(t *testing.T) {
 				ParallelApply:             Bool(false),
 				AbortOnExecutionOrderFail: false,
 				Workflows:                 map[string]valid.Workflow{},
-				AutomergeMethod:           raw.DefaultAutomergeMethod,
+				AutomergeMethod:           "",
 			},
 		},
 		{
@@ -343,7 +343,7 @@ func TestConfig_ToValid(t *testing.T) {
 			exp: valid.RepoCfg{
 				Version:         2,
 				Workflows:       map[string]valid.Workflow{},
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 			},
 		},
 		{
@@ -358,7 +358,7 @@ func TestConfig_ToValid(t *testing.T) {
 					Mode: valid.AutoDiscoverEnabledMode,
 				},
 				Workflows:       map[string]valid.Workflow{},
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 			},
 		},
 		{
@@ -369,7 +369,7 @@ func TestConfig_ToValid(t *testing.T) {
 			exp: valid.RepoCfg{
 				Version:         2,
 				Workflows:       map[string]valid.Workflow{},
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 			},
 		},
 		{
@@ -384,7 +384,7 @@ func TestConfig_ToValid(t *testing.T) {
 					Mode: valid.RepoLocksOnApplyMode,
 				},
 				Workflows:       map[string]valid.Workflow{},
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 			},
 		},
 		{
@@ -415,7 +415,7 @@ func TestConfig_ToValid(t *testing.T) {
 						StateRm:     valid.DefaultStateRmStage,
 					},
 				},
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 			},
 		},
 		{

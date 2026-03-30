@@ -161,7 +161,7 @@ workflows:
 `,
 			exp: valid.RepoCfg{
 				Version:         2,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Workflows: map[string]valid.Workflow{
 					"custom": {
 						Name:        "custom",
@@ -191,7 +191,7 @@ projects:`,
 			exp: valid.RepoCfg{
 				Version:         3,
 				Projects:        nil,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Workflows:       map[string]valid.Workflow{},
 			},
 		},
@@ -211,7 +211,7 @@ projects:
 - dir: .`,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:              ".",
@@ -237,7 +237,7 @@ projects:
 `,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:       ".",
@@ -262,7 +262,7 @@ projects:
 `,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:       ".",
@@ -285,7 +285,7 @@ projects:
 `,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:       ".",
@@ -309,7 +309,7 @@ workflows: ~
 `,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:       ".",
@@ -338,7 +338,7 @@ workflows:
 `,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:       ".",
@@ -368,7 +368,7 @@ workflows:
   myworkflow: ~`,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:              ".",
@@ -403,7 +403,7 @@ workflows:
   myworkflow: ~`,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:              ".",
@@ -438,7 +438,7 @@ workflows:
   myworkflow: ~`,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:              ".",
@@ -473,7 +473,7 @@ workflows:
   myworkflow: ~`,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:              ".",
@@ -508,7 +508,7 @@ workflows:
   myworkflow: ~`,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:              ".",
@@ -543,7 +543,7 @@ workflows:
   myworkflow: ~`,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:              ".",
@@ -578,7 +578,7 @@ workflows:
   myworkflow: ~`,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:              ".",
@@ -613,7 +613,7 @@ workflows:
   myworkflow: ~`,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:              ".",
@@ -643,7 +643,7 @@ projects:
 `,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:                   ".",
@@ -751,7 +751,7 @@ projects:
   workspace: workspace`,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Name:      String("myname"),
@@ -804,7 +804,7 @@ workflows:
 `,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:       ".",
@@ -904,7 +904,7 @@ workflows:
 `,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:       ".",
@@ -996,7 +996,7 @@ workflows:
 `,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:       ".",
@@ -1090,7 +1090,7 @@ workflows:
 `,
 			exp: valid.RepoCfg{
 				Version:         3,
-				AutomergeMethod: raw.DefaultAutomergeMethod,
+				AutomergeMethod: "",
 				Projects: []valid.Project{
 					{
 						Dir:       ".",

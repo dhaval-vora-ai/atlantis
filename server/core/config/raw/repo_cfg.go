@@ -69,7 +69,7 @@ func (r RepoCfg) ToValid() valid.RepoCfg {
 	}
 
 	automerge := r.Automerge
-	automergeMethod := DefaultAutomergeMethod
+	var automergeMethod string
 	if r.AutomergeMethod != nil {
 		automergeMethod = *r.AutomergeMethod
 	}

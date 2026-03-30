@@ -1020,6 +1020,11 @@ func (s *ServerCmd) validate(userConfig server.UserConfig) error {
 			CheckoutStrategyBranch, CheckoutStrategyMerge)
 	}
 
+	validMethods := []string{"merge", "squash", "rebase"}
+	if !slices.Contains(validMethods, userConfig.AutomergeMethod) {
+		return fmt.Errorf("invalid automerge method %q: must be one of %v", userConfig.AutomergeMethod, validMethods)
+	}
+
 	if (userConfig.SSLKeyFile == "") != (userConfig.SSLCertFile == "") {
 		return fmt.Errorf("--%s and --%s are both required for ssl", SSLKeyFileFlag, SSLCertFileFlag)
 	}

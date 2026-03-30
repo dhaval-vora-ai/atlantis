@@ -1002,6 +1002,11 @@ func (g *Client) MergePull(logger logging.SimpleLogging, pull models.PullRequest
 		}
 	}
 
+	validMethods := []string{defaultMergeMethod, rebaseMergeMethod, squashMergeMethod}
+	if !slices.Contains(validMethods, method) {
+		return fmt.Errorf("merge method %q is unknown, valid values are: %v", method, validMethods)
+	}
+
 	// Now we're ready to make our API call to merge the pull request.
 	options := &github.PullRequestOptions{
 		MergeMethod: method,
